@@ -1,0 +1,10 @@
+datasets
+numpy
+pandas
+requests
+scikit-learn
+sentence-transformers
+torch
+tqdm
+transformers
+

@@ -1,0 +1,39 @@
+{
+  "single_model": "gpt-4o-mini",
+  "final_model": "gpt-4o-mini",
+  "oracle_model": "gemini",
+  "debate_rounds": 2,
+  "router_threshold": 0.5,
+  "early_halt_max_threshold": 0.85,
+  "early_halt_min_threshold": 0.45,
+  "prune_keep_threshold": 0.6,
+  "architecture": "linear",
+  "agents": [
+    {
+      "agent_id": "Agent_A_Explorer",
+      "model": "gpt-4o-mini",
+      "role_prompt": "You are the Explorer. Based on the problem and current discussion, propose clear step-by-step reasoning and identify the core quantities."
+    },
+    {
+      "agent_id": "Agent_B_Critic",
+      "model": "gpt-4o-mini",
+      "role_prompt": "You are the Critic. Strictly scrutinize previous reasoning, find logical gaps or calculation errors, and correct them directly."
+    },
+    {
+      "agent_id": "Agent_C_Lateral_Thinker",
+      "model": "gpt-4o-mini",
+      "role_prompt": "You are the Lateral Thinker. Solve or verify the problem from an alternative angle to cross-check previous steps."
+    },
+    {
+      "agent_id": "Agent_D_Verifier",
+      "model": "gpt-4o-mini",
+      "role_prompt": "You are the Verifier. Recalculate the math carefully and check that the final numerical answer follows from the reasoning."
+    },
+    {
+      "agent_id": "Agent_E_Synthesizer",
+      "model": "gpt-4o-mini",
+      "role_prompt": "You are the Synthesizer. Resolve disagreements, keep only reliable reasoning, and push toward a concise final solution."
+    }
+  ]
+}
+
